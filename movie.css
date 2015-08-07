@@ -1,0 +1,29 @@
+
+.nplab_frames {
+}
+
+.nplab_frame {
+     position : absolute;
+     top      : 0%;
+     left     : 0%;
+     width    : 100%;
+     height   : 100%;
+}
+
+.nplab_image{
+    position : absolute;
+    text-align: center;
+    vertical-align:middle;
+    z-index  :  -1;
+}
+
+.nplab_overlay{
+   position : inherit;
+   z-index : 1;
+}
+
+.nplab_overlay span {
+	font-size : 11;
+	color   : #FFF;
+	background-color : rgba(120, 0, 0, .5);
+}
