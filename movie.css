@@ -3,27 +3,26 @@
 }
 
 .nplab_frame {
-     position : absolute;
-     top      : 0%;
-     left     : 0%;
-     width    : 100%;
-     height   : 100%;
+	position: relative;
 }
 
-.nplab_image{
-    position : absolute;
-    text-align: center;
-    vertical-align:middle;
-    z-index  :  -1;
+.nplab_frame .nplab_image{
+    z-index  :  1;
 }
 
 .nplab_overlay{
-   position : inherit;
-   z-index : 1;
+	z-index : 2;
 }
 
 .nplab_overlay span {
-	font-size : 11;
-	color   : #FFF;
-	background-color : rgba(120, 0, 0, .5);
+	position : absolute;
+	font-size : 14px;
+	color   : #282827;
+    text-align: center;
+    vertical-align:middle;
+    left: 0;
+    top : 0;
+	background-color : rgba(153, 250, 78, .5);
 }
+
+

@@ -1,18 +1,29 @@
 <html>
 <head>
 
-<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css" type="text/css" media="all" /> 
-<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.min.js" type="text/javascript"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/base/jquery-ui.css" type="text/css" media="all" /> 
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js" type="text/javascript"></script>
 
+<!-- Required --> 
 <link rel="stylesheet" href="movie.css" type="text/css" /> 
 <script src="movie.js" type="text/javascript"> </script>
 
 <link rel="stylesheet" href="player.css" type="text/css" /> 
 <script src="player.js" type="text/javascript"> </script>
+<style>
+
+#test_player{
+	display : block;
+	margin : auto;
+}
+
+
+</style>
 
 </head>
 <body>
+
 
 	<div id="test_movie">
 	</div> 
@@ -20,31 +31,38 @@
 	<div id="test_player">
 	</div>
 	
-	
-	
 <script>
-	
-// JavaScript Document
-$(document).ready(function() {
-
-	$("#test_movie").movie({
+function test_movie(){
+	var options = {
 		"images" : [
 			"http://3.bp.blogspot.com/-J9vgrYfWrLU/T8h8gBACLvI/AAAAAAAADyw/ZCX3CW9xDgA/s400/desktop-wallpaper-24.jpg",       
 			"http://coolwallpapershd.org/wp-content/uploads/2013/08/nature_1.jpg",
 			"http://hdwallpapersd.com/wp-content/uploads/2014/06/forests-nature-pc-background-picture.jpg",
 			"http://1.bp.blogspot.com/-YczvcDC_j5Q/UCDW1A46hmI/AAAAAAAABMI/LhFLBj0HAxY/s400/Beautiful+fall+river+-++wallpaper.jpg"], 
 		"overlays" : ["Image: 0", "Image: 1", "Image: 2", "Image: 3"]
-	});
+	};
+
+
+	// test movie
+	// $("#test_movie").movie(options);
 
 	var movie = $("#test_movie").data("movie");
 	movie.showOverlays(false);
 	movie.gotoFrame(3);
 	movie.setScale(2);
 	movie.gotoFrame(1);
-	$("#test_movie").movie("destroy");
+}
+
+
+
+// JavaScript Document
+$(document).ready(function() {
+	
+	// test_movie();
+	// test player
+	$('#test_player').player();
 
 });
-
 
 </script>
 
